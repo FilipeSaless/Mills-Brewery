@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mills Brewery · Cervejaria artesanal de BH</title>
+  <meta name="description" content="Cervejas artesanais da Mills Brewery, de Belo Horizonte/MG. Lagers, IPAs, Sours, Stouts e Barley Wines direto da cervejaria." />
+  <link rel="icon" href="img/logo/logo-3-100x100h.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Ícones -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.8" fill="var(--bg-perk, #fff)" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="17.5" r="1.8" fill="var(--bg-perk, #fff)" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-medal" viewBox="0 0 24 24"><circle cx="12" cy="14" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 9.5 6 3h4l2 4 2-4h4l-2.5 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <!-- Ficha técnica -->
+    <symbol id="i-glass" viewBox="0 0 24 24"><path d="M6.5 3.5h11L16 20.5H8L6.5 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 8.5h10" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-hop" viewBox="0 0 24 24"><path d="M12 4c3.2 2 5 5.2 5 8.8 0 3.9-2.3 6.7-5 7.7-2.7-1-5-3.8-5-7.7C7 9.2 8.8 6 12 4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 4V2M7.6 10c2.5 1.4 6.3 1.4 8.8 0M7.2 14c2.8 1.6 6.8 1.6 9.6 0M8.8 17.8c1.9 1 4.5 1 6.4 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s6 6.4 6 10.9a6 6 0 0 1-12 0C6 9.9 12 3.5 12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.2 14.5a2.9 2.9 0 0 0 2.4 2.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-citrus" viewBox="0 0 24 24"><path d="M3.5 10.5a8.5 8.5 0 0 0 17 0Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6.5 10.5a5.5 5.5 0 0 0 11 0M12 10.5V16M12 10.5l3.6 3.8M12 10.5l-3.6 3.8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9M9.5 4.5 12 6.5l2.5-2M9.5 19.5l2.5-2 2.5 2M4.6 10.6l3-.6-1-3M19.4 13.4l-3 .6 1 3M4.6 13.4l3 .6-1 3M19.4 10.6l-3-.6 1-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-percent" viewBox="0 0 24 24"><path d="M18.5 5.5l-13 13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="7.5" cy="7.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16.5" cy="16.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  </svg>
+
+  <div class="announce">
+    <div class="announce__track">
+      <span>Frete grátis para o Sudeste nas compras acima de R$&nbsp;250</span>
+      <span aria-hidden="true">·</span>
+      <span>Lançamento: trilogia Barley Wine Wood Aged</span>
+      <span aria-hidden="true">·</span>
+      <span>Direto da cervejaria em Belo Horizonte/MG</span>
+    </div>
+  </div>
+
+  <header class="header" id="top">
+    <div class="header__inner container">
+      <button class="icon-btn header__menu" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <svg><use href="#i-menu" /></svg>
+      </button>
+
+      <a href="#top" class="brand" aria-label="Mills Brewery — início">
+        <img src="img/logo/logo-3-100x100h.png" alt="Mills Brewery" width="59" height="50" />
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#catalogo" data-nav-filter="cervejas">Cervejas</a>
+        <a href="#catalogo" data-nav-filter="packs">Packs</a>
+        <a href="#catalogo" data-nav-filter="souvenir">Souvenir</a>
+        <a href="#lancamentos">Lançamentos</a>
+        <a href="#sobre">A Cervejaria</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Buscar">
+          <svg><use href="#i-search" /></svg>
+        </button>
+        <button class="icon-btn" id="wishBtn" aria-label="Lista de desejos">
+          <svg><use href="#i-heart" /></svg>
+          <span class="count" id="wishCount" hidden>0</span>
+        </button>
+        <button class="icon-btn icon-btn--cart" id="cartBtn" aria-label="Abrir carrinho">
+          <svg><use href="#i-bag" /></svg>
+          <span class="count" id="cartCount" hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__inner container">
+        <div class="hero__copy">
+          <p class="eyebrow eyebrow--light">Lançamento · Edição Wood Aged</p>
+          <h1 class="hero__title">Uma Barley Wine.<br /><em>Três madeiras.</em></h1>
+          <p class="hero__lead">
+            Carvalho americano, carvalho francês e maple. A mesma receita encorpada,
+            maturada de três jeitos diferentes. Prove lado a lado.
+          </p>
+          <div class="hero__ctas">
+            <a href="#lancamentos" class="btn btn--amber">
+              Comprar lançamentos <svg><use href="#i-arrow" /></svg>
+            </a>
+            <a href="#catalogo" class="btn btn--ghost">Ver catálogo completo</a>
+          </div>
+          <dl class="hero__facts">
+            <div><dt>30+</dt><dd>rótulos e packs</dd></div>
+            <div><dt>BH</dt><dd>produção mineira</dd></div>
+            <div><dt>R$ 250</dt><dd>frete grátis no Sudeste</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__sun"></div>
+          <img class="hero__bottle hero__bottle--l" src="img/beers/mockup-barley-carvalho-americano-final-448x448.png" alt="" />
+          <img class="hero__bottle hero__bottle--r" src="img/beers/mockup-barley-maple-final-1-448x448.png" alt="" />
+          <img class="hero__bottle hero__bottle--c" src="img/beers/mockup-barley-carvalho-frances-final-448x448.png" alt="" />
+          <div class="hero__chip">
+            <span>a partir de</span>
+            <strong>R$ 26,00</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="perks container" aria-label="Benefícios">
+      <div class="perk">
+        <svg><use href="#i-truck" /></svg>
+        <div><strong>Frete grátis no Sudeste</strong><span>em compras acima de R$ 250</span></div>
+      </div>
+      <div class="perk">
+        <svg><use href="#i-pin" /></svg>
+        <div><strong>Direto da fábrica</strong><span>São Francisco, Belo Horizonte/MG</span></div>
+      </div>
+      <div class="perk">
+        <svg><use href="#i-medal" /></svg>
+        <div><strong>IPAs premiadas</strong><span>conheça a seleção em pack</span></div>
+      </div>
+    </section>
+
+    <!-- LANÇAMENTOS -->
+    <section class="section" id="lancamentos">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Acabou de sair do tanque</p>
+            <h2 class="section__title">Lançamentos</h2>
+          </div>
+          <div class="rail-nav">
+            <button class="icon-btn icon-btn--outline" data-rail="-1" aria-label="Anterior"><svg><use href="#i-chev-l" /></svg></button>
+            <button class="icon-btn icon-btn--outline" data-rail="1" aria-label="Próximo"><svg><use href="#i-chev-r" /></svg></button>
+          </div>
+        </div>
+        <div class="rail" id="rail"></div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="section section--catalog" id="catalogo">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Conheça nossas cervejas</p>
+            <h2 class="section__title">Catálogo</h2>
+          </div>
+          <p class="section__note">
+            Da Lager refrescante à New England IPA e à Cajazeira, cervejas inspiradas na tradição cervejeira de Minas Gerais.
+          </p>
+        </div>
+
+        <div class="toolbar">
+          <div class="chips" role="tablist" aria-label="Filtrar por categoria" id="chips">
+            <button class="chip is-active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+            <button class="chip" data-filter="lancamento" role="tab" aria-selected="false">Lançamentos</button>
+            <button class="chip" data-filter="cervejas" role="tab" aria-selected="false">Cervejas</button>
+            <button class="chip" data-filter="packs" role="tab" aria-selected="false">Packs</button>
+            <button class="chip" data-filter="leves" role="tab" aria-selected="false">Sem álcool &amp; Low carb</button>
+            <button class="chip" data-filter="promo" role="tab" aria-selected="false">Promoções</button>
+            <button class="chip" data-filter="souvenir" role="tab" aria-selected="false">Souvenir</button>
+            <button class="chip" data-filter="favoritos" role="tab" aria-selected="false">
+              <svg><use href="#i-heart" /></svg> Favoritos
+            </button>
+          </div>
+
+          <div class="toolbar__right">
+            <label class="search" id="searchBox">
+              <svg><use href="#i-search" /></svg>
+              <input type="search" id="searchInput" placeholder="Buscar estilo ou rótulo…" autocomplete="off" />
+            </label>
+            <label class="select">
+              <span class="sr-only">Ordenar</span>
+              <select id="sortSelect">
+                <option value="relevancia">Relevância</option>
+                <option value="menor">Menor preço</option>
+                <option value="maior">Maior preço</option>
+                <option value="az">Nome A–Z</option>
+                <option value="desconto">Maior desconto</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <p class="results" id="results" aria-live="polite"></p>
+        <div class="grid" id="grid"></div>
+
+        <div class="empty" id="empty" hidden>
+          <p class="empty__title">Nenhum produto encontrado</p>
+          <p>Tente outro termo ou limpe os filtros.</p>
+          <button class="btn btn--dark" id="clearFilters">Limpar filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="about" id="sobre">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Lager</span><i></i><span>Session IPA</span><i></i><span>New England IPA</span><i></i><span>Sour</span><i></i><span>Irish Red</span><i></i><span>Porter</span><i></i><span>Imperial Stout</span><i></i><span>Barley Wine</span><i></i>
+          <span>Lager</span><i></i><span>Session IPA</span><i></i><span>New England IPA</span><i></i><span>Sour</span><i></i><span>Irish Red</span><i></i><span>Porter</span><i></i><span>Imperial Stout</span><i></i><span>Barley Wine</span><i></i>
+        </div>
+      </div>
+
+      <div class="about__inner container">
+        <div class="about__mark">
+          <img src="img/logo/logo-3-100x100h.png" alt="" width="118" height="100" />
+        </div>
+        <div class="about__copy">
+          <p class="eyebrow eyebrow--light">A Cervejaria</p>
+          <h2 class="about__title">Tradição mineira, <em>do moinho ao copo.</em></h2>
+          <p>
+            Cervejas de alta qualidade e sabores autênticos, inspirados na rica tradição cervejeira de Minas Gerais.
+            Da Lager puro malte às edições maturadas em madeira, cada lote nasce em Belo Horizonte, na nossa fábrica do bairro São Francisco.
+          </p>
+          <a href="#catalogo" class="btn btn--amber">Explorar rótulos <svg><use href="#i-arrow" /></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner container">
+      <div class="footer__brand">
+        <img src="img/logo/logo-3-100x100h.png" alt="Mills Brewery" width="71" height="60" />
+        <p>Cervejaria Mills<br />CNPJ 23.293.312/0001-36</p>
+      </div>
+      <div class="footer__col">
+        <h3>Loja</h3>
+        <a href="#catalogo" data-nav-filter="cervejas">Cervejas</a>
+        <a href="#catalogo" data-nav-filter="packs">Packs</a>
+        <a href="#catalogo" data-nav-filter="souvenir">Souvenir</a>
+        <a href="#lancamentos">Lançamentos</a>
+      </div>
+      <div class="footer__col">
+        <h3>Ajuda</h3>
+        <a href="#">SAC</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos e Condições</a>
+        <a href="#">Definições de Cookie</a>
+      </div>
+      <div class="footer__col">
+        <h3>Contato</h3>
+        <a href="mailto:contato@millsbrewery.com.br">contato@millsbrewery.com.br</a>
+        <a href="https://wa.me/5531995272062" target="_blank" rel="noopener">(31) 99527-2062</a>
+        <p>R. Algarve, 421 · São Francisco<br />Belo Horizonte/MG</p>
+      </div>
+    </div>
+    <div class="footer__legal container">
+      <p>Venda proibida para menores de 18 anos. Se beber, não dirija. Aprecie com moderação.</p>
+      <p>© <span id="year"></span> Mills Brewery</p>
+      <p class="footer__credit">Protótipo de redesign criado por <strong>Filipe Sales</strong></p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5531995272062" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg><use href="#i-whatsapp" /></svg>
+  </a>
+
+  <!-- CARRINHO -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="cart" aria-label="Carrinho" aria-hidden="true">
+    <div class="drawer__head">
+      <h2>Seu carrinho <span id="cartHeadCount"></span></h2>
+      <button class="icon-btn" data-close-cart aria-label="Fechar carrinho"><svg><use href="#i-close" /></svg></button>
+    </div>
+
+    <div class="ship" id="ship">
+      <p class="ship__text" id="shipText"></p>
+      <div class="ship__bar"><span id="shipBar"></span></div>
+    </div>
+
+    <ul class="drawer__items" id="cartItems"></ul>
+
+    <div class="drawer__empty" id="cartEmpty">
+      <svg><use href="#i-bag" /></svg>
+      <p>Seu carrinho está vazio.</p>
+      <button class="btn btn--dark" data-close-cart data-goto="#catalogo">Ver cervejas</button>
+    </div>
+
+    <div class="drawer__foot" id="cartFoot">
+      <div class="drawer__row"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div>
+      <div class="drawer__row drawer__row--muted" id="cartSavingsRow"><span>Você economiza</span><span id="cartSavings"></span></div>
+      <p class="drawer__hint">Frete calculado na finalização. Pedido confirmado pelo WhatsApp da cervejaria.</p>
+      <a class="btn btn--amber btn--block" id="checkoutBtn" href="#" target="_blank" rel="noopener">
+        <svg><use href="#i-whatsapp" /></svg> Finalizar pedido
+      </a>
+    </div>
+  </aside>
+
+  <!-- DETALHE DO PRODUTO -->
+  <dialog class="modal" id="quickView" aria-labelledby="qvName">
+    <button class="icon-btn modal__close" data-close-modal aria-label="Fechar"><svg><use href="#i-close" /></svg></button>
+    <div class="qv">
+      <div class="qv__media"><img id="qvImg" alt="" /><div class="badges" id="qvBadges"></div></div>
+      <div class="qv__body">
+        <p class="eyebrow" id="qvStyle"></p>
+        <h2 class="qv__name" id="qvName"></h2>
+        <div class="price price--lg" id="qvPrice"></div>
+        <p class="qv__desc" id="qvDesc"></p>
+        <ul class="specs specs--qv" id="qvSpecs"></ul>
+        <div class="qv__buy">
+          <div class="stepper" id="qvStepper">
+            <button type="button" data-qv-step="-1" aria-label="Diminuir"><svg><use href="#i-minus" /></svg></button>
+            <output id="qvQty">1</output>
+            <button type="button" data-qv-step="1" aria-label="Aumentar"><svg><use href="#i-plus" /></svg></button>
+          </div>
+          <button class="btn btn--amber btn--grow" id="qvAdd">Adicionar ao carrinho</button>
+          <button class="icon-btn icon-btn--outline" id="qvWish" aria-label="Favoritar"><svg><use href="#i-heart" /></svg></button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- VERIFICAÇÃO DE IDADE -->
+  <dialog class="modal modal--age" id="ageGate" aria-labelledby="ageTitle">
+    <img src="img/logo/logo-3-100x100h.png" alt="Mills Brewery" width="94" height="80" />
+    <h2 id="ageTitle">Você tem 18 anos ou mais?</h2>
+    <p id="ageText">Este site vende bebidas alcoólicas. Confirme sua idade para continuar.</p>
+    <div class="age__ctas" id="ageCtas">
+      <button class="btn btn--amber" id="ageYes">Sim, tenho 18+</button>
+      <button class="btn btn--ghost" id="ageNo">Não</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
