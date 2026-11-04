@@ -66,7 +66,7 @@
     if (p.tags.includes("lancamento")) out.push(`<span class="badge badge--new">Lançamento</span>`);
     const off = discount(p);
     if (off) out.push(`<span class="badge badge--off">-${off}%</span>`);
-    if (p.tags.includes("sem-alcool")) out.push(`<span class="badge badge--light">Sem álcool</span>`);
+    if (p.tags.includes("sem-alcool")) out.push(`<span class="badge badge--light badge--blue">Sem álcool</span>`);
     else if (p.tags.includes("low-carb")) out.push(`<span class="badge badge--light">Sem glúten</span>`);
     return out.join("");
   }
@@ -518,6 +518,12 @@
   scrim.addEventListener("click", closeCart);
   menuBtn.addEventListener("click", () => setMenu(!nav.classList.contains("is-open")));
   $$("#nav a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+  // fecha o menu mobile ao tocar fora dele
+  document.addEventListener("click", (e) => {
+    if (nav.classList.contains("is-open") && !e.target.closest("#nav, #menuBtn")) setMenu(false);
+  });
+  // se a tela crescer (girar o tablet), o menu mobile não fica aberto escondido
+  matchMedia("(min-width: 901px)").addEventListener("change", (e) => e.matches && setMenu(false));
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
