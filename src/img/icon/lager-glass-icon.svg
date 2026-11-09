@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512" role="img" aria-label="Ícone de copo lager">
+  <g fill="none" stroke="#000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- contorno externo -->
+    <path d="M33,2 H67 L60.5,84 H39.5 Z"/>
+    <!-- base -->
+    <path d="M39.5,84 H60.5 L62,94.5 Q62.4,98 59,98 H41 Q37.6,98 38,94.5 Z"/>
+    <!-- linha da borda -->
+    <path d="M33.4,7 Q50,9 66.6,7"/>
+  </g>
+</svg>

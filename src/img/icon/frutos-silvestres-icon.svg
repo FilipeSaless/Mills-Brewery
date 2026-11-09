@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512" role="img" aria-label="Ícone de frutos silvestres">
+  <g fill="none" stroke="#000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="27" cy="68" r="17"/>
+    <circle cx="73" cy="68" r="17"/>
+    <circle cx="50" cy="38" r="17"/>
+    <path d="M18,66 A9,9 0 0 1 24,59"/>
+    <path d="M64,66 A9,9 0 0 1 70,59"/>
+    <path d="M41,36 A9,9 0 0 1 47,29"/>
+    <path d="M50,21 C52,12 62,6 74,8 C74,18 64,24 50,21 Z"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512" role="img" aria-label="Ícone de cacau">
+  <g fill="none" stroke="#000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(50 50) rotate(35) scale(.9) translate(-50 -50)" stroke-width="6.5">
+      <path d="M50,8 C78,20 84,52 72,78 C67,89 58,95 50,96 C42,95 33,89 28,78 C16,52 22,20 50,8 Z"/>
+      <path d="M50,12 V92"/>
+      <path d="M37,17 C29,42 31,68 40,89"/>
+      <path d="M63,17 C71,42 69,68 60,89"/>
+      <path d="M50,8 V2"/>
+    </g>
+  </g>
+</svg>

@@ -81,12 +81,25 @@
   /* ---------- Ficha técnica ----------
      Cada linha só aparece se o produto tiver o dado. Para incluir a
      temperatura de serviço, basta preencher `temp` em products.js. */
+  const GLASSES = {
+    pint: "Copo Pint",
+    ipa: "Copo IPA",
+    tulipa: "Tulipa",
+    taca: "Taça",
+    lager: "Copo Lager",
+    snifter: "Snifter",
+  };
+
   const SPEC_ROWS = [
-    { icon: "glass", label: "Estilo", value: (p) => p.style },
-    { icon: "hop", label: "Lúpulos e ingredientes", value: (p) => p.ingr },
-    { icon: "drop", label: "Volume", value: (p) => p.volume && p.volume.replace("ml", " ml") },
-    { icon: "citrus", label: "Aroma e sabor", value: (p) => p.notes },
+    { icon: "tag", label: "Estilo", value: (p) => p.style },
+    { icon: "drop", label: "Volume", fullOnly: true, value: (p) => p.volume && p.volume.replace("ml", " ml") },
+    { icon: (p) => `fl-${p.flavor || "malte"}`, label: "Aroma e sabor", value: (p) => p.notes },
     { icon: "snow", label: "Temperatura de serviço", value: (p) => p.temp },
+    {
+      icon: (p) => p.glass.map((g) => `cup-${g}`),
+      label: "Copo ideal",
+      value: (p) => p.glass && p.glass.map((g) => GLASSES[g]).join(" ou "),
+    },
     {
       icon: "percent",
       label: "Teor alcoólico e amargor",
@@ -97,15 +110,27 @@
 
   const hasSpecs = (p) => p.category === "cervejas";
 
-  function specRow(icon, label, text, extra = "") {
-    return `<li title="${label}: ${text}">${icon ? `<svg aria-hidden="true"><use href="#i-${icon}"/></svg>` : ""}<span><span class="sr-only">${label}: </span>${text}</span>${extra}</li>`;
+  // Ícones de copo (cup-*) e sabor (fl-*) ficam no sprite do index.html,
+  // copiados de src/img/icon, para herdarem a cor da paleta.
+  function specIcon(name) {
+    return `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
+  }
+
+  // icons: nome ou lista de nomes (ex.: dois copos lado a lado)
+  function specRow(icons, label, text, extra = "") {
+    const list = [].concat(icons || []);
+    const art = list.map(specIcon).join("");
+    const wrapped = list.length > 1 ? `<i class="specs__icons">${art}</i>` : art;
+    return `<li title="${label}: ${text}">${wrapped}<span><span class="sr-only">${label}: </span>${text}</span>${extra}</li>`;
   }
 
   // compact = card (1 linha por dado, só a principal medalha); senão = detalhe completo
   function specsHTML(p, compact = true) {
-    const rows = SPEC_ROWS.map((r) => [r, r.value(p)])
+    // no card o volume já aparece no subtítulo, então só entra no detalhe
+    const rows = SPEC_ROWS.filter((r) => !(compact && r.fullOnly))
+      .map((r) => [r, r.value(p)])
       .filter(([, v]) => v)
-      .map(([r, v]) => specRow(r.icon, r.label, v));
+      .map(([r, v]) => specRow(typeof r.icon === "function" ? r.icon(p) : r.icon, r.label, v));
 
     const awards = p.awards || [];
     if (awards.length) {

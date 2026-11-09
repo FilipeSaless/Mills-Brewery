@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512" role="img" aria-label="Ícone de copo tulipa">
+  <g fill="none" stroke="#000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- contorno externo -->
+    <path d="M32,2 C31,18 31,28 32.5,40 C34.5,55 39.5,64 40,76 C40,80 38,82 34,85 C31,87 31,91 31.5,94 Q32,98 38,98 H62 Q68,98 68.5,94 C69,91 69,87 66,85 C62,82 60,80 60,76 C60.5,64 65.5,55 67.5,40 C69,28 69,18 68,2 Z"/>
+    <!-- linha da borda -->
+    <path d="M32.5,6 Q50,7.5 67.5,6"/>
+    <!-- linha da base -->
+    <path d="M35,86 Q50,89 65,86"/>
+  </g>
+</svg>
